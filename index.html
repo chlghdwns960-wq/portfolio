@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>최홍준 | Web Design Portfolio</title>
+  <meta name="description" content="UI/UX 흐름을 고려해 웹 화면을 설계하고 HTML, CSS, JavaScript로 구현하는 웹디자이너 / 웹 퍼블리셔 지원자 최홍준의 포트폴리오입니다.">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <a href="#main" class="skip-link">본문 바로가기</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#hero" class="header-logo" aria-label="포트폴리오 첫 화면으로 이동">
+        CHJ Portfolio
+      </a>
+
+      <nav class="header-nav" id="headerNav" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="menu-button" id="menuButton" aria-label="모바일 메뉴 열기" aria-expanded="false" aria-controls="headerNav">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero section" id="hero" aria-labelledby="heroTitle">
+      <div class="inner hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Web Designer · Publisher Portfolio</p>
+
+          <h1 class="hero-title" id="heroTitle">
+            WEB DESIGN<br>
+            PORTFOLIO
+          </h1>
+
+          <div class="hero-copy">
+            <p>
+              사용자 흐름을 설계하고,<br>
+              HTML·CSS·JavaScript로 구현합니다.
+            </p>
+            <span>구조 설계 · 반응형 구현 · 브랜드형 상세페이지에 강점을 둔 지원자 최홍준</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="button button-primary">View Projects</a>
+            <a href="#contact" class="button button-secondary">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero-preview hero-preview-featured" aria-label="대표 프로젝트 미리보기">
+          <article class="featured-project-card">
+            <div class="featured-project-info">
+              <span class="project-index">01</span>
+              <h2>PetLog</h2>
+              <p>Mobile Web App</p>
+
+              <span class="featured-line"></span>
+
+              <p class="featured-description">
+                반려동물의 사진, 기록, 병원 정보를<br>
+                모바일 흐름에 맞춰 관리하는 웹앱
+              </p>
+
+              <span class="project-chip">Mobile UI · Interaction</span>
+            </div>
+
+            <div class="featured-phone">
+              <div class="featured-phone-screen">
+                <img
+                  src="./images/projects/petlog-home-screen.png"
+                  alt="PetLog 모바일 홈 화면"
+                  class="featured-phone-image"
+                >
+              </div>
+            </div>
+          </article>
+
+          <div class="sub-project-grid">
+            <article class="sub-project-card">
+              <div>
+                <span class="project-index">02</span>
+                <h2>집반찬연구소</h2>
+                <p>Responsive Renewal</p>
+              </div>
+
+              <span class="featured-line"></span>
+
+              <p class="sub-project-description">
+                데스크톱 중심 커머스 화면을<br>
+                반응형 웹 구조로 재구성
+              </p>
+
+              <span class="project-chip">Responsive · Commerce</span>
+            </article>
+
+            <article class="sub-project-card">
+              <div>
+                <span class="project-index">03</span>
+                <h2>Pocketwalk</h2>
+                <p>Branding & Detail</p>
+              </div>
+
+              <span class="featured-line"></span>
+
+              <p class="sub-project-description">
+                산책 웨이스트백 브랜드와<br>
+                상품 상세 흐름을 설계
+              </p>
+
+              <span class="project-chip">Branding · Detail · CTA</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section class="projects section" id="projects" aria-labelledby="projectsTitle">
+      <div class="inner projects-inner">
+        <div class="section-heading projects-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="projectsTitle">Selected Projects</h2>
+          <p>
+            앱 UI, PC·모바일 반응형 웹, 브랜딩 상세페이지를
+            프로젝트 성격에 맞는 방식으로 정리했습니다.
+          </p>
+        </div>
+
+        <div class="project-showcase-v2">
+          <!-- Project 01 -->
+          <article class="project-panel project-panel-app">
+            <div class="project-panel-visual app-visual" aria-label="PetLog 모바일 웹앱 대표 화면">
+              <div class="app-phone-frame">
+                <img
+                  src="./images/projects/petlog-home-screen.png"
+                  alt="PetLog 모바일 홈 화면"
+                  class="app-phone-image js-lightbox-image"
+                  data-lightbox-title="PetLog Mobile Web App"
+                >
+              </div>
+            </div>
+
+            <div class="project-panel-info">
+              <span class="project-number">01</span>
+              <h3>PetLog Mobile Web App</h3>
+              <p class="project-summary">
+                반려동물의 사진, 기록, 일정, 병원 정보를 모바일 흐름에 맞춰 관리할 수 있도록 설계한 웹앱 프로젝트입니다.
+              </p>
+
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>UI 구조 설계 · 모바일 화면 구현 · JavaScript 인터랙션</dd>
+                </div>
+                <div>
+                  <dt>Tech</dt>
+                  <dd>HTML5 · CSS3 · JavaScript · LocalStorage</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>기록 추가, 사진 확인, 병원 정보 탐색 흐름을 모바일 사용 순서에 맞춰 단순화</dd>
+                </div>
+              </dl>
+
+              <ul class="project-points" aria-label="PetLog 핵심 구현 포인트">
+                <li>Mobile App UI</li>
+                <li>Record Flow</li>
+                <li>Photo Archive</li>
+                <li>Hospital Search</li>
+              </ul>
+
+              <div class="project-actions">
+                <a href="https://chlghdwns960-wq.github.io/ai/Exam" class="button button-primary" target="_blank" rel="noopener noreferrer" aria-label="PetLog 프로젝트 새 창에서 보기">View Project</a>
+                <a href="https://github.com/chlghdwns960-wq/petlog-mobile-webapp" class="button button-secondary" target="_blank" rel="noopener noreferrer" aria-label="PetLog GitHub 저장소 새 창에서 보기">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-panel project-panel-responsive">
+            <div class="project-panel-info">
+              <span class="project-number">02</span>
+              <h3>집반찬연구소 PC·Mobile 리뉴얼</h3>
+              <p class="project-summary">
+                데스크톱 중심으로 구성된 커머스 화면을 PC와 Mobile 기준으로 재구성한 반응형 웹 리뉴얼 프로젝트입니다.
+              </p>
+
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>PC·Mobile 반응형 구조 설계 · 커머스 메인/상세 화면 구현 · UI 인터랙션 적용</dd>
+                </div>
+                <div>
+                  <dt>Tech</dt>
+                  <dd>HTML5 · CSS3 · JavaScript · Swiper</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>PC의 상품 탐색 밀도와 모바일의 빠른 구매 흐름이 모두 보이도록 레이아웃을 재구성</dd>
+                </div>
+              </dl>
+
+              <ul class="project-points" aria-label="집반찬연구소 핵심 구현 포인트">
+                <li>PC Web</li>
+                <li>Mobile Web</li>
+                <li>Commerce Layout</li>
+                <li>Swiper Interaction</li>
+              </ul>
+
+              <div class="project-actions">
+                <a href="https://chlghdwns960-wq.github.io/ai/ai_zipbancan/main.html" class="button button-primary" target="_blank" rel="noopener noreferrer" aria-label="집반찬연구소 프로젝트 새 창에서 보기">View Project</a>
+                <a href="https://github.com/chlghdwns960-wq/zipbanchan-responsive-renewal" class="button button-secondary" target="_blank" rel="noopener noreferrer" aria-label="집반찬연구소 GitHub 저장소 새 창에서 보기">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-panel-visual responsive-board" aria-label="집반찬연구소 PC와 모바일 화면">
+              <div class="responsive-main-device">
+                <span class="device-label">PC Web</span>
+                <img
+                  src="./images/projects/jipbanchan-pc.png"
+                  alt="집반찬연구소 PC 화면"
+                  class="responsive-main-image js-lightbox-image"
+                  data-lightbox-title="집반찬연구소 PC Web"
+                >
+              </div>
+
+              <div class="responsive-sub-device">
+                <span class="device-label">Mobile</span>
+                <img
+                  src="./images/projects/jipbanchan-mobile.png"
+                  alt="집반찬연구소 모바일 화면"
+                  class="responsive-sub-image js-lightbox-image"
+                  data-lightbox-title="집반찬연구소 Mobile Web"
+                >
+              </div>
+
+              <div class="responsive-device-note" aria-hidden="true">
+                <span>PC</span>
+                <span>Responsive Renewal</span>
+                <span>Mobile</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-panel project-panel-brand">
+            <div class="project-panel-info">
+              <span class="project-number">03</span>
+              <h3>Pocketwalk Branding & Detail</h3>
+              <p class="project-summary">
+                반려견 산책 올인원 웨이스트백 아이템과 브랜드를 기획하고, 상품 가치와 구매 흐름이 보이도록 구성한 브랜딩/상세페이지 프로젝트입니다.
+              </p>
+
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>브랜드 콘셉트 기획 · 상품 상세페이지 구조 설계 · CTA 흐름 구성</dd>
+                </div>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>Figma · Photoshop · Illustrator</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>산책 준비물의 분산 문제를 브랜드 시스템, 제품 비주얼, 상세페이지 설득 흐름으로 연결</dd>
+                </div>
+              </dl>
+
+              <ul class="project-points" aria-label="Pocketwalk 핵심 작업 포인트">
+                <li>Brand Concept</li>
+                <li>Product Detail</li>
+                <li>Visual System</li>
+                <li>CTA Flow</li>
+              </ul>
+
+              <div class="project-actions">
+                <a href="./pocketwalk.html" class="button button-primary" aria-label="Pocketwalk 케이스스터디 보기">View Case Study</a>
+              </div>
+            </div>
+
+            <div class="project-panel-visual brand-board" aria-label="Pocketwalk 브랜딩과 상세페이지 보드">
+              <figure class="brand-shot brand-shot-product">
+                <img
+                  src="./images/projects/pocketwalk-product.png"
+                  alt="Pocketwalk 제품 목업"
+                  class="js-lightbox-image"
+                  data-lightbox-title="Pocketwalk Product Mockup"
+                >
+              </figure>
+
+              <figure class="brand-shot brand-shot-main">
+                <img
+                  src="./images/projects/pocketwalk-brand.png"
+                  alt="Pocketwalk 브랜드 보드"
+                  class="js-lightbox-image"
+                  data-lightbox-title="Pocketwalk Brand Concept"
+                >
+              </figure>
+
+              <figure class="brand-shot brand-shot-detail">
+                <img
+                  src="./images/projects/pocketwalk-detail.png"
+                  alt="Pocketwalk 상세페이지 일부"
+                  class="js-lightbox-image"
+                  data-lightbox-title="Pocketwalk Detail Page"
+                >
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- About Me -->
+<section class="about section" id="about" aria-labelledby="aboutTitle">
+  <div class="inner">
+    <div class="section-heading">
+      <p class="eyebrow">About Me</p>
+      <h2 id="aboutTitle">운영 흐름을 이해하고,<br>화면 구조로 정리합니다.</h2>
+    </div>
+
+    <div class="about-grid">
+      <article class="about-profile card">
+        <p class="card-label">Profile</p>
+        <h3>최홍준</h3>
+        <p>Web Designer / Web Publisher</p>
+    <p class="about-small-text">
+  운영 프로세스에 대한 이해를 바탕으로,
+  사용자 흐름이 보이는 웹 화면을 구현합니다.
+</p>
+      </article>
+
+      <div class="about-photo-card" aria-label="프로필 사진 영역">
+        <div class="photo-placeholder">
+          <img
+            src="./images/profile/profile.jpg"
+            alt="최홍준 프로필 사진"
+            class="profile-photo"
+          >
+        </div>
+
+        <div class="mini-ui-card">
+          <strong>Flow Based Thinking</strong>
+          <p>Operation · UI/UX · Web Publishing</p>
+        </div>
+      </div>
+
+      <article class="about-description card">
+        <p class="card-label">Description</p>
+      <p>
+  식품회사 생산관리 업무를 통해 현장 운영 흐름과 문제 발생 지점을 다뤄왔습니다.
+</p>
+<p>
+  현재는 이 경험을 UI/UX와 웹 구현에 연결해, 사용자와 운영자 모두가 이해하기 쉬운 화면 구조를 만드는 것을 목표로 합니다.
+</p>
+
+        <ul class="keyword-list" aria-label="핵심 작업 키워드">
+          <li>Operation Flow</li>
+          <li>User Flow</li>
+          <li>Responsive Layout</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="about-info-grid">
+<article class="info-card">
+  <h3>Work Experience</h3>
+  <p>
+    <strong>식품회사 생산관리 4년</strong>
+    현장 운영 흐름과 문제 발생 지점을 관리한 경험이 있습니다.
+  </p>
+</article>
+
+      <article class="info-card">
+        <h3>License</h3>
+        <p>GTQ Photoshop 1급</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Education</h3>
+        <p>AI 활용 리서치 및 데이터 분석 기반 UI/UX 웹개발</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Tools</h3>
+        <p>HTML · CSS · JavaScript · Figma · Photoshop · Illustrator · GitHub</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- Working Method -->
+    <section class="method section" aria-labelledby="methodTitle">
+      <div class="inner">
+<div class="section-heading">
+  <p class="eyebrow">Working Method</p>
+  <h2 id="methodTitle">화면을 만들기 전, 구조와 흐름을 먼저 정리합니다.</h2>
+  <p>
+    콘텐츠 구조, 반응형 기준, 필요한 인터랙션을 분리해 안정적인 화면으로 구현합니다.
+  </p>
+</div>
+
+<div class="method-grid">
+  <article class="method-card">
+    <span>01</span>
+    <h3>Structure</h3>
+    <p>
+      콘텐츠 우선순위와 화면 흐름을 먼저 정리한 뒤, 시맨틱 HTML로 구조를 설계합니다.
+    </p>
+  </article>
+
+  <article class="method-card">
+    <span>02</span>
+    <h3>Responsive</h3>
+    <p>
+      PC와 Mobile 환경에서 정보 순서와 간격이 유지되도록 반응형 레이아웃을 구현합니다.
+    </p>
+  </article>
+
+  <article class="method-card">
+    <span>03</span>
+    <h3>Interaction</h3>
+    <p>
+      메뉴, 탭, 슬라이드, 폼처럼 사용자의 행동이 필요한 지점에 JavaScript 인터랙션을 적용합니다.
+    </p>
+  </article>
+</div>
+      </div>
+    </section>
+<!-- Skills -->
+<section class="skills section" id="skills" aria-labelledby="skillsTitle">
+  <div class="inner">
+    <div class="section-heading">
+      <p class="eyebrow">Skills</p>
+      <h2 id="skillsTitle">기술은 구현 가능한 범위로 정리했습니다.</h2>
+    </div>
+
+    <div class="skill-group">
+      <div class="group-title">
+        <h3>Core Skills</h3>
+        <p>구조, 반응형, 인터랙션 구현에 사용하는 핵심 기술입니다.</p>
+      </div>
+
+      <div class="skill-grid core-skill-grid">
+        <article class="skill-card">
+          <h4>HTML5</h4>
+          <p>콘텐츠 구조와 접근성을 고려해 시맨틱 마크업을 작성합니다.</p>
+        </article>
+
+        <article class="skill-card">
+          <h4>CSS3</h4>
+          <p>Flex, Grid, Media Query로 PC·Mobile 반응형 레이아웃을 구성합니다.</p>
+        </article>
+
+        <article class="skill-card">
+          <h4>JavaScript</h4>
+          <p>DOM 조작을 기반으로 메뉴, 탭, 슬라이드, 폼 검증 등 필요한 인터랙션을 구현합니다.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="group-title">
+        <h3>Design & Tools</h3>
+        <p>화면 분석, 이미지 정리, 코드 관리에 사용하는 도구입니다.</p>
+      </div>
+
+      <div class="skill-grid tool-skill-grid">
+        <article class="skill-card small">
+          <h4>Figma</h4>
+          <p>시안 구조 분석 · 간격 확인</p>
+        </article>
+
+        <article class="skill-card small">
+          <h4>Photoshop</h4>
+          <p>이미지 보정 · 웹용 이미지 정리</p>
+        </article>
+
+        <article class="skill-card small">
+          <h4>Illustrator</h4>
+          <p>아이콘 · 벡터 요소 정리</p>
+        </article>
+
+        <article class="skill-card small">
+          <h4>GitHub</h4>
+          <p>코드 버전 관리 · 배포 확인</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Project Process -->
+    <section class="process section dark-section" aria-labelledby="processTitle">
+      <div class="inner">
+<div class="section-heading dark-heading">
+  <p class="eyebrow">Project Process</p>
+  <h2 id="processTitle">목적과 구조를 정리한 뒤 구현합니다.</h2>
+  <p>
+    사용자 흐름, 화면 구조, 디자인 기준, 기능 점검 순서로 프로젝트를 진행합니다.
+  </p>
+</div>
+
+<div class="process-grid">
+  <article class="process-card">
+    <span>01</span>
+    <h3>Research</h3>
+    <p>프로젝트 목적과 사용자 흐름을 먼저 정리합니다.</p>
+  </article>
+
+  <article class="process-card">
+    <span>02</span>
+    <h3>Structure</h3>
+    <p>콘텐츠 순서에 맞춰 화면 구조와 HTML 설계를 정리합니다.</p>
+  </article>
+
+  <article class="process-card">
+    <span>03</span>
+    <h3>Design</h3>
+    <p>컬러, 간격, 카드, 버튼 등 반복되는 화면 기준을 정리합니다.</p>
+  </article>
+
+  <article class="process-card">
+    <span>04</span>
+    <h3>Develop</h3>
+    <p>반응형 레이아웃과 JavaScript 인터랙션을 구현하고 점검합니다.</p>
+  </article>
+</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section dark-section" id="contact" aria-labelledby="contactTitle">
+      <div class="inner contact-inner">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contactTitle">
+            Let’s Build<br>
+            Something Clear.
+          </h2>
+        </div>
+
+        <div class="contact-content">
+         <p>
+  사용자 흐름이 보이는 화면과<br>
+  유지보수 가능한 구조를 함께 고민합니다.
+</p>
+
+          <div class="contact-actions">
+            <a href="mailto:ghdwns961@naver.com" class="button button-primary">Email Me</a>
+            <a href="https://github.com/chlghdwns960-wq" class="button button-dark-line" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+
+          <span class="resume-link resume-link-disabled">Resume not attached</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="화면 맨 위로 이동">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <footer class="site-footer">
+    <div class="inner footer-inner">
+      <p>© 2026 Choi Hongjun Portfolio</p>
+
+      <div class="footer-links">
+        <a href="mailto:ghdwns961@naver.com">Email</a>
+        <a href="https://github.com/chlghdwns960-wq" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Lightbox -->
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-backdrop" type="button" aria-label="확대 이미지 닫기"></button>
+
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+      <button class="lightbox-close" type="button" aria-label="확대 이미지 닫기">
+        <span></span>
+        <span></span>
+      </button>
+
+      <p class="lightbox-title" id="lightboxTitle">Project Preview</p>
+      <img src="" alt="" class="lightbox-image">
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
