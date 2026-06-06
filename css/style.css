@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /* =========================================================
   01. Reset
@@ -428,10 +428,10 @@ video {
 
 .hero-title {
   margin-top: 22px;
-  font-size: clamp(76px, 8.8vw, 142px);
+  font-size: clamp(68px, 7.8vw, 124px);
   font-weight: 900;
   line-height: 0.88;
-  letter-spacing: -0.078em;
+  letter-spacing: -0.058em;
 }
 
 .hero-copy {
@@ -1652,7 +1652,6 @@ video {
   font-size: 14px;
 }
 /* =========================================================
-  About Me Photo & Copy Patch
 ========================================================= */
 .about-profile .about-small-text {
   max-width: 100%;
@@ -1700,7 +1699,7 @@ video {
   line-height: 1.5;
 }
 
-/* Mobile About Patch */
+/* Mobile About */
 @media (max-width: 720px) {
   .about-profile .about-small-text,
   .about-description p,
@@ -1717,7 +1716,6 @@ video {
   }
 }
 /* =========================================================
-  About Text Readability Patch
 ========================================================= */
 .about p,
 .about-small-text,
@@ -1749,7 +1747,6 @@ video {
   }
 }
 /* =========================================================
-  About Profile Photo Final Patch
 ========================================================= */
 .about-photo-card .photo-placeholder {
   min-height: 420px;
@@ -2485,7 +2482,7 @@ video {
 }
 
 .hero-title {
-  font-size: clamp(72px, 7.5vw, 124px);
+  font-size: clamp(68px, 7.2vw, 116px);
 }
 
 @media (max-width: 1180px) {
@@ -2569,8 +2566,6 @@ video {
 }
 /* =========================================================
   Hero Viewport Tuning
-  - Large PC impact
-  - Medium PC / laptop height balance
 ========================================================= */
 
 /* 1920px 이상 큰 PC 화면: 첫 화면 임팩트 강화 */
@@ -2737,7 +2732,6 @@ video {
 }
 /* =========================================================
   Hero Overlap Fix
-  - Prevent title from invading project card area
 ========================================================= */
 
 .hero-content {
@@ -2780,10 +2774,6 @@ video {
   }
 }
 /* =========================================================
-  Hero PetLog Mockup Focus Patch
-  - Phone size up
-  - Tilt reduced
-  - Featured card balance
 ========================================================= */
 
 /* 공통: 실제 앱 이미지가 목업 안에서 안정적으로 보이게 처리 */
@@ -2853,8 +2843,6 @@ video {
   }
 }
 /* =========================================================
-  Hero Button Focus Patch
-  - Slightly stronger CTA presence
 ========================================================= */
 
 .hero-actions .button {
@@ -2889,8 +2877,6 @@ video {
   }
 }
 /* =========================================================
-  Hero Sub Project Chip Readability Patch
-  - Improve secondary project chip visibility
 ========================================================= */
 
 .sub-project-card .project-chip {
@@ -2922,8 +2908,6 @@ video {
   }
 }
 /* =========================================================
-  Mobile Navigation Readability Patch
-  - Make mobile menu clearly separated from hero content
 ========================================================= */
 
 @media (max-width: 960px) {
@@ -2949,8 +2933,6 @@ video {
   }
 }
 /* =========================================================
-  Hero PetLog Screen Safe Area Patch
-  - Prevent app UI from being clipped by rounded phone screen
 ========================================================= */
 
 .featured-phone-screen {
@@ -2988,8 +2970,6 @@ video {
   }
 }
 /* =========================================================
-  Hero PetLog Screen Fill Patch
-  - Fill phone screen without inner white padding
 ========================================================= */
 
 .featured-phone-screen {
@@ -3045,9 +3025,6 @@ video {
   }
 }
 /* =========================================================
-  Hero PetLog Final Screen Ratio Patch
-  - Match actual PetLog screenshot ratio
-  - Prevent side clipping
 ========================================================= */
 
 .featured-phone-screen {
@@ -3106,8 +3083,6 @@ video {
   }
 }
 /* =========================================================
-  Hero PetLog Phone Frame Final Patch
-  - Make phone bezel thickness look more consistent
 ========================================================= */
 
 .featured-phone {
@@ -3179,8 +3154,6 @@ video {
   }
 }
 /* =========================================================
-  Hero Project Chip Hover Consistency Patch
-  - Apply same subtle hover to featured and sub project chips
 ========================================================= */
 
 .hero-preview-featured .project-chip {
@@ -3198,8 +3171,6 @@ video {
   color: var(--color-text);
 }
 /* =========================================================
-  Hero Featured Project Card Hover Patch
-  - Keep hover motion consistent with sub cards
 ========================================================= */
 
 .featured-project-card {
@@ -3229,8 +3200,6 @@ video {
   }
 }
 /* =========================================================
-  Hero Typography Density Final Patch
-  - Improve text scale and spacing without changing layout
 ========================================================= */
 
 /* PetLog 메인 카드 정보 밀도 보강 */
@@ -3435,7 +3404,7 @@ body.is-lightbox-open {
 }
 
 /* =========================================================
-  Detail Page Portfolio Final Refinement
+  Detail Page Portfolio Refinement
 ========================================================= */
 .project-panel-detail {
   grid-template-columns: minmax(340px, 0.43fr) minmax(0, 0.57fr);
@@ -3657,7 +3626,6 @@ body.is-lightbox-open {
   }
 }
 /* =========================================================
-  Working Method Responsive Patch
 ========================================================= */
 .method-card {
   display: flex;
@@ -3718,7 +3686,6 @@ body.is-lightbox-open {
   }
 }
 /* =========================================================
-  Skills Section Density Patch
 ========================================================= */
 .skills .section-heading {
   max-width: 760px;
@@ -3784,7 +3751,7 @@ body.is-lightbox-open {
   margin-top: 16px;
 }
 
-/* Mobile Skills Patch */
+/* Mobile Skills */
 @media (max-width: 720px) {
   .skills .section-heading h2 {
     font-size: clamp(34px, 9vw, 42px);
@@ -3831,7 +3798,6 @@ body.is-lightbox-open {
   }
 }
 /* =========================================================
-  Project Process Responsive Patch
 ========================================================= */
 .process-card {
   display: flex;
@@ -3897,3 +3863,5 @@ body.is-lightbox-open {
     height: 48px;
   }
 }
+
+
