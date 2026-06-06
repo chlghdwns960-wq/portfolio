@@ -1062,6 +1062,13 @@ video {
   overflow: hidden;
 }
 
+.detail-page-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
 .detail-page-shot figcaption {
   position: absolute;
   left: 14px;
@@ -1092,13 +1099,158 @@ video {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
   background: #ffffff;
 }
 
 .detail-page-shot-primary img {
   object-position: center top;
+}
+
+.detail-page-shot-primary .detail-page-link {
+  background: #d9ecfb;
+}
+
+.detail-page-shot:not(.detail-page-shot-primary) .detail-page-link {
+  background: #fbfaf5;
+}
+
+/* =========================================================
+  Detail Page Original View
+========================================================= */
+.detail-view-page {
+  background: var(--color-bg);
+}
+
+.detail-view-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 72px;
+  padding: 0 clamp(20px, 6vw, 88px);
+  border-bottom: 1px solid var(--color-line);
+  background: rgba(244, 241, 234, 0.94);
+  backdrop-filter: blur(16px);
+}
+
+.detail-view-back,
+.detail-view-nav a {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.detail-view-back {
+  color: var(--color-point);
+}
+
+.detail-view-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.detail-view-main {
+  width: min(100% - 40px, 1120px);
+  margin: 0 auto;
+  padding: 82px 0 120px;
+}
+
+.detail-view-hero {
+  max-width: 760px;
+  margin-bottom: 54px;
+}
+
+.detail-view-hero h1 {
+  margin-top: 16px;
+  color: var(--color-text);
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
+}
+
+.detail-view-hero p,
+.detail-original-intro p {
+  margin-top: 20px;
+  color: var(--color-sub);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.detail-original-section {
+  scroll-margin-top: 96px;
+  margin-top: 72px;
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid var(--color-line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow-soft);
+}
+
+.detail-original-intro {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.detail-original-intro h2 {
+  margin-top: 14px;
+  color: var(--color-text);
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.08;
+}
+
+.detail-original-frame {
+  margin: 0 auto;
+  padding: clamp(14px, 2vw, 24px);
+  border: 1px solid rgba(216, 211, 200, 0.9);
+  border-radius: 24px;
+  background: #ffffff;
+  overflow-x: auto;
+}
+
+.detail-original-frame img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+@media (max-width: 720px) {
+  .detail-view-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 20px;
+  }
+
+  .detail-view-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .detail-view-main {
+    width: min(100% - 28px, 1120px);
+    padding: 48px 0 80px;
+  }
+
+  .detail-original-section {
+    margin-top: 42px;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .detail-original-frame {
+    padding: 10px;
+    border-radius: 18px;
+  }
 }
 /* =========================================================
   Large PC
