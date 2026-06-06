@@ -3433,6 +3433,213 @@ body.is-lightbox-open {
     top: 18px;
   }
 }
+
+/* =========================================================
+  Detail Page Portfolio Final Refinement
+========================================================= */
+.project-panel-detail {
+  grid-template-columns: minmax(340px, 0.43fr) minmax(0, 0.57fr);
+}
+
+.project-panel-detail .detail-page-board {
+  align-self: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  height: auto;
+  min-height: 0;
+  padding: 18px;
+}
+
+.project-panel-detail .detail-page-shot {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.project-panel-detail .detail-page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border: 1px solid rgba(216, 211, 200, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(34, 34, 34, 0.12);
+  overflow: hidden;
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.project-panel-detail .detail-page-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(200, 146, 30, 0.55);
+  box-shadow: 0 24px 48px rgba(34, 34, 34, 0.16);
+}
+
+.project-panel-detail .detail-page-shot-primary .detail-page-link {
+  background: #dceefa;
+}
+
+.project-panel-detail .detail-page-shot:not(.detail-page-shot-primary) .detail-page-link {
+  background: #fbfaf5;
+}
+
+.project-panel-detail .detail-page-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  object-position: center top;
+  background: transparent;
+}
+
+.project-panel-detail .detail-page-caption {
+  position: static;
+  display: grid;
+  gap: 4px;
+  padding: 0 2px;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text);
+  backdrop-filter: none;
+}
+
+.project-panel-detail .detail-page-caption strong {
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.project-panel-detail .detail-page-caption span {
+  color: var(--color-sub);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.button-detail-mungfish {
+  border-color: #0b4b8f;
+  background: #0b4b8f;
+  color: #ffffff;
+}
+
+.button-detail-mungfish:hover {
+  border-color: #083967;
+  background: #083967;
+  color: #ffffff;
+}
+
+.button-detail-shear {
+  border-color: #245f36;
+  background: #ffffff;
+  color: #245f36;
+}
+
+.button-detail-shear:hover {
+  border-color: #245f36;
+  background: #245f36;
+  color: #ffffff;
+}
+
+.detail-view-page {
+  background: #f4f1ea;
+}
+
+.detail-view-main {
+  width: min(100% - 40px, 1180px);
+}
+
+.detail-view-hero {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.detail-original-section {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.28fr) minmax(0, 0.72fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 52px);
+}
+
+.detail-original-intro {
+  position: sticky;
+  top: 108px;
+  margin-bottom: 0;
+}
+
+.detail-original-intro h2 {
+  font-size: clamp(26px, 3.2vw, 38px);
+}
+
+.detail-original-frame {
+  width: min(100%, 900px);
+  max-height: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.detail-original-frame img {
+  width: min(100%, 860px);
+  max-width: none;
+  margin: 0 auto;
+  border: 1px solid rgba(216, 211, 200, 0.92);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(34, 34, 34, 0.14);
+}
+
+@media (max-width: 1180px) {
+  .project-panel-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .project-panel-detail .detail-page-board {
+    order: -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .detail-original-section {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-original-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-panel-detail .detail-page-board {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .project-panel-detail .detail-page-link {
+    aspect-ratio: 4 / 5;
+    padding: 8px;
+  }
+
+  .detail-original-frame img {
+    width: 100%;
+  }
+}
 /* =========================================================
   15. Reduced Motion
 ========================================================= */
