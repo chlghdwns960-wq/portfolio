@@ -774,6 +774,9 @@ video {
 }
 
 .project-points li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 12px;
   border: 1px solid var(--color-line);
   border-radius: 999px;
@@ -781,6 +784,7 @@ video {
   color: var(--color-sub);
   font-size: 12px;
   font-weight: 800;
+  line-height: 1;
 }
 
 .project-actions {
@@ -4046,6 +4050,7 @@ svg {
     min-height: 34px;
     padding: 0 13px;
     font-size: 12px;
+    line-height: 1;
   }
 
   .contact-actions .button {
@@ -4100,4 +4105,3 @@ svg {
     display: none !important;
   }
 }
-
