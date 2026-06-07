@@ -302,16 +302,11 @@ function initCustomCursor() {
 
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
   let rafId = null;
 
   function renderCursor() {
-    ringX += (mouseX - ringX) * 0.18;
-    ringY += (mouseY - ringY) * 0.18;
-
-    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate3d(-50%, -50%, 0) rotate(-35deg)`;
-    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate3d(-50%, -50%, 0) rotate(-35deg)`;
+    ring.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     rafId = window.requestAnimationFrame(renderCursor);
   }
 
