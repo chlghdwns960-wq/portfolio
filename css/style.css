@@ -4020,4 +4020,36 @@ svg {
   }
 }
 
+/* =========================================================
+  Native-speed portfolio cursor
+========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  :root {
+    --portfolio-cursor-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32'%3E%3Cpath fill='%23C8921E' stroke='%23FFFFFF' stroke-width='1.6' stroke-linejoin='round' d='M4 3l16 14.2-7.2 1.6 4.1 8.2-3.9 1.9-4.1-8.1-5 5.8z'/%3E%3C/svg%3E");
+    --portfolio-cursor-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32'%3E%3Cpath fill='%231F2A24' stroke='%23FFFFFF' stroke-width='1.6' stroke-linejoin='round' d='M4 3l16 14.2-7.2 1.6 4.1 8.2-3.9 1.9-4.1-8.1-5 5.8z'/%3E%3C/svg%3E");
+  }
+
+  body,
+  body.has-custom-cursor,
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor select {
+    cursor: var(--portfolio-cursor-gold) 4 3, auto !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  .js-lightbox-image,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor .js-lightbox-image {
+    cursor: var(--portfolio-cursor-dark) 4 3, pointer !important;
+  }
+
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 

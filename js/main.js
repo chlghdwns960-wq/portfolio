@@ -289,6 +289,8 @@ initImageLightbox();
   Custom Cursor
 ========================================================= */
 function initCustomCursor() {
+  return;
+
   const cursor = document.getElementById("customCursor");
   const ring = cursor?.querySelector(".custom-cursor-ring");
   const dot = cursor?.querySelector(".custom-cursor-dot");
