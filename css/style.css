@@ -3970,43 +3970,56 @@ svg {
     left: 0;
     top: 0;
     display: block;
-    border-radius: 50%;
     transform: translate3d(-50%, -50%, 0);
     will-change: transform;
   }
 
   .custom-cursor-ring {
-    width: 34px;
-    height: 34px;
-    border: 1px solid rgba(203, 145, 24, 0.72);
-    background: rgba(244, 241, 234, 0.16);
-    box-shadow: 0 8px 24px rgba(24, 38, 29, 0.12);
-    backdrop-filter: blur(5px);
+    width: 24px;
+    height: 24px;
+    border: 0;
+    border-top: 2px solid rgba(203, 145, 24, 0.78);
+    border-left: 2px solid rgba(203, 145, 24, 0.78);
+    background: transparent;
+    box-shadow: -5px -5px 14px rgba(24, 38, 29, 0.08);
+    transform-origin: center;
     transition:
       width 0.2s ease,
       height 0.2s ease,
       border-color 0.2s ease,
-      background 0.2s ease;
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
   .custom-cursor-dot {
-    width: 6px;
-    height: 6px;
+    width: 14px;
+    height: 2px;
+    border-radius: 999px;
     background: var(--color-accent);
-    box-shadow: 0 0 0 5px rgba(203, 145, 24, 0.08);
+    box-shadow: 0 6px 18px rgba(203, 145, 24, 0.18);
+    opacity: 0.95;
   }
 
   .custom-cursor.is-hovering .custom-cursor-ring {
-    width: 48px;
-    height: 48px;
+    width: 34px;
+    height: 34px;
     border-color: rgba(28, 58, 43, 0.72);
-    background: rgba(28, 58, 43, 0.08);
+    opacity: 0.95;
+  }
+
+  .custom-cursor.is-hovering .custom-cursor-dot {
+    width: 22px;
+    background: rgba(28, 58, 43, 0.88);
   }
 
   .custom-cursor.is-active .custom-cursor-ring {
-    width: 28px;
-    height: 28px;
-    background: rgba(203, 145, 24, 0.18);
+    width: 18px;
+    height: 18px;
+    border-color: rgba(203, 145, 24, 0.95);
+  }
+
+  .custom-cursor.is-active .custom-cursor-dot {
+    width: 10px;
   }
 }
 
