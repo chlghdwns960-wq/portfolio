@@ -4020,6 +4020,55 @@ svg {
   }
 }
 
+@media (max-width: 720px) {
+  .project-actions {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .project-actions .button {
+    width: auto;
+    min-height: 40px;
+    flex: 0 1 auto;
+    padding: 0 16px;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .project-points {
+    gap: 8px;
+  }
+
+  .project-points li {
+    min-height: 34px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .contact-actions .button {
+    min-height: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-actions {
+    align-items: flex-start;
+  }
+
+  .project-actions .button {
+    min-width: 112px;
+    max-width: 170px;
+  }
+
+  .project-actions .button-detail-mungfish,
+  .project-actions .button-detail-shear {
+    max-width: none;
+  }
+}
+
 /* =========================================================
   Native-speed portfolio cursor
 ========================================================= */
@@ -4051,5 +4100,4 @@ svg {
     display: none !important;
   }
 }
-
 
