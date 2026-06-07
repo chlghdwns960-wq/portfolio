@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 
 /* =========================================================
   Portfolio Main JavaScript
@@ -285,4 +285,79 @@ function initImageLightbox() {
 
 initImageLightbox();
 
-initImageLightbox();
+/* =========================================================
+  Custom Cursor
+========================================================= */
+function initCustomCursor() {
+  const cursor = document.getElementById("customCursor");
+  const ring = cursor?.querySelector(".custom-cursor-ring");
+  const dot = cursor?.querySelector(".custom-cursor-dot");
+  const hoverTargets = document.querySelectorAll(
+    'a, button, input, textarea, select, [role="button"], .js-lightbox-image'
+  );
+  const finePointerQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (!cursor || !ring || !dot || !finePointerQuery.matches || reducedMotionQuery.matches) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+  let rafId = null;
+
+  function renderCursor() {
+    ringX += (mouseX - ringX) * 0.18;
+    ringY += (mouseY - ringY) * 0.18;
+
+    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate3d(-50%, -50%, 0)`;
+    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate3d(-50%, -50%, 0)`;
+    rafId = window.requestAnimationFrame(renderCursor);
+  }
+
+  function startCursor() {
+    if (rafId) return;
+    document.body.classList.add("has-custom-cursor");
+    rafId = window.requestAnimationFrame(renderCursor);
+  }
+
+  function stopCursor() {
+    document.body.classList.remove("has-custom-cursor");
+    cursor.classList.remove("is-visible", "is-hovering", "is-active");
+
+    if (rafId) {
+      window.cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  }
+
+  document.addEventListener(
+    "mousemove",
+    (event) => {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      cursor.classList.add("is-visible");
+      startCursor();
+    },
+    { passive: true }
+  );
+
+  document.addEventListener("mouseleave", () => cursor.classList.remove("is-visible"));
+  document.addEventListener("mousedown", () => cursor.classList.add("is-active"));
+  document.addEventListener("mouseup", () => cursor.classList.remove("is-active"));
+
+  hoverTargets.forEach((target) => {
+    target.addEventListener("mouseenter", () => cursor.classList.add("is-hovering"));
+    target.addEventListener("mouseleave", () => cursor.classList.remove("is-hovering"));
+  });
+
+  finePointerQuery.addEventListener?.("change", (event) => {
+    if (!event.matches) stopCursor();
+  });
+
+  reducedMotionQuery.addEventListener?.("change", (event) => {
+    if (event.matches) stopCursor();
+  });
+}
+
+initCustomCursor();

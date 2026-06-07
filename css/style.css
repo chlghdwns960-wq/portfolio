@@ -3864,4 +3864,166 @@ body.is-lightbox-open {
   }
 }
 
+/* =========================================================
+  Final Mobile & Cursor Polish
+========================================================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+.project-card,
+.project-visual,
+.project-panel,
+.detail-view-main,
+.image-lightbox,
+.lightbox-content {
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 44px);
+    padding-bottom: 72px;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    font-size: clamp(44px, 15vw, 68px);
+    line-height: 0.92;
+  }
+
+  .project-actions,
+  .contact-actions,
+  .detail-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .button,
+  .contact-actions .button,
+  .detail-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-content {
+    width: calc(100% - 28px);
+    max-height: calc(100dvh - 28px);
+    padding: 18px;
+  }
+}
+
+.custom-cursor {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor select,
+  body.has-custom-cursor .js-lightbox-image {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: block;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+  }
+
+  .custom-cursor.is-visible {
+    opacity: 1;
+  }
+
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+  }
+
+  .custom-cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(203, 145, 24, 0.72);
+    background: rgba(244, 241, 234, 0.16);
+    box-shadow: 0 8px 24px rgba(24, 38, 29, 0.12);
+    backdrop-filter: blur(5px);
+    transition:
+      width 0.2s ease,
+      height 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .custom-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 5px rgba(203, 145, 24, 0.08);
+  }
+
+  .custom-cursor.is-hovering .custom-cursor-ring {
+    width: 48px;
+    height: 48px;
+    border-color: rgba(28, 58, 43, 0.72);
+    background: rgba(28, 58, 43, 0.08);
+  }
+
+  .custom-cursor.is-active .custom-cursor-ring {
+    width: 28px;
+    height: 28px;
+    background: rgba(203, 145, 24, 0.18);
+  }
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor select,
+  body.has-custom-cursor .js-lightbox-image {
+    cursor: auto;
+  }
+
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 
