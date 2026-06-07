@@ -4034,7 +4034,7 @@ svg {
   body.has-custom-cursor input,
   body.has-custom-cursor textarea,
   body.has-custom-cursor select {
-    cursor: var(--portfolio-cursor-gold) 4 3, auto !important;
+    cursor: var(--portfolio-cursor-dark) 4 3, auto !important;
   }
 
   a,
@@ -4044,7 +4044,7 @@ svg {
   body.has-custom-cursor a,
   body.has-custom-cursor button,
   body.has-custom-cursor .js-lightbox-image {
-    cursor: var(--portfolio-cursor-dark) 4 3, pointer !important;
+    cursor: var(--portfolio-cursor-gold) 4 3, pointer !important;
   }
 
   .custom-cursor {
